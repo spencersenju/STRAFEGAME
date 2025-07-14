@@ -251,12 +251,12 @@ public class PlayerController : MonoBehaviour
 
     void HandleCameraTiltAndSquash()
     {
-        // Tilt (Z axis) only on Main Camera (cameraTransform)
+       
         float targetTilt = 0f;
         if (isWallRunning)
         {
             if (Physics.Raycast(transform.position, transform.right, 1f))
-            targetTilt = wallCamTilt;  // now tilts AWAY from wall
+            targetTilt = wallCamTilt;  
             else if (Physics.Raycast(transform.position, -transform.right, 1f))
             targetTilt = -wallCamTilt;
 
@@ -269,7 +269,7 @@ public class PlayerController : MonoBehaviour
             wallCamTiltSpeed * Time.deltaTime
         );
 
-        // Slide camera squash (Y position)
+        
         Vector3 targetPos = isSliding
             ? new Vector3(originalCamPos.x, slideCamHeight, originalCamPos.z)
             : originalCamPos;
