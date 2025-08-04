@@ -23,5 +23,6 @@ public class PlayerRespawn : MonoBehaviour
         controller.enabled = false;
         transform.position = spawnPoint.position;
         controller.enabled = true;
+        FindObjectOfType<SpeedrunTimer>().ResetTimer();
     }
 }

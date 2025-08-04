@@ -34,4 +34,12 @@ public class SpeedrunTimer : MonoBehaviour
     {
         return timer;
     }
+
+    public void ResetTimer()
+    {
+    timer = 0f;
+    isRunning = true;
+    timerText.text = "00:00.00";
+    }
+
 }

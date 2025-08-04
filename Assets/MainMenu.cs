@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("PlayGame button clicked");
-        SceneManager.LoadScene("TestLevel");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void QuitGame()
